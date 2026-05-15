@@ -1,0 +1,37 @@
+{
+  "name": "azdo-pr-review-health-bot",
+  "version": "1.0.0",
+  "description": "Azure DevOps PR review health summaries and Slack DM notifications",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "watch": "tsc -p tsconfig.build.json --watch",
+    "start": "func start",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.3.2",
+    "@azure/functions": "^4.8.1",
+    "@slack/web-api": "^7.8.0",
+    "cron-parser": "^5.5.0",
+    "luxon": "^3.5.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^20.17.24",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.25.0",
+    "vitest": "^3.0.7"
+  }
+}

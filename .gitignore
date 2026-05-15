@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.azurefunctions/
+*.log
+.localhost/
+local.settings.json
+config/config.json
+.env
+.env.*
+!.env.example
+
+# Local Azurite / emulator (may contain storage account metadata)
+AzuriteConfig
+__azurite*
+__blobstorage__/

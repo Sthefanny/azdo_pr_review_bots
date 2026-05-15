@@ -1,0 +1,11 @@
+.git*
+.vscode
+src
+**/*.test.ts
+vitest.config.ts
+tsconfig*.json
+eslint.config.mjs
+local.settings.json
+azure-pipelines.yml
+*.md
+!README.md

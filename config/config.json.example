@@ -1,0 +1,92 @@
+{
+  "teams": [
+    {
+      "id": "example-team",
+      "enabled": true,
+      "displayName": "Example Team",
+      "azureDevOps": {
+        "organization": "your-org",
+        "project": "YourProject",
+        "repositoryId": "${MY_REPOSITORY_ID}",
+        "repositoryName": "YourRepo.Name",
+        "patEnvVar": "AZDO_PAT_MY_TEAM",
+        "useReadyForReviewLabel": false,
+        "readyForReviewLabel": "Ready for Review",
+        "activePullRequestCreatedWithinDays": 7
+      },
+      "slack": {
+        "webhookEnvVar": "SLACK_WEBHOOK_MY_TEAM",
+        "botTokenEnvVar": "SLACK_BOT_TOKEN_MY_TEAM",
+        "userMapping": {
+          "dev.lead@example.com": "U0123456789"
+        }
+      },
+      "businessDays": {
+        "timezone": "America/New_York",
+        "weekdays": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ]
+      },
+      "reviewDebt": {
+        "enabled": true,
+        "schedule": "0 0 9 * * 1-5",
+        "slaBusinessDays": [1, 2],
+        "includeNeedsAttention": true,
+        "maxNeedsAttentionItems": 10,
+        "includeBlockedByChecks": true,
+        "includeUnresolvedComments": true,
+        "includeWaitingForLeadApproval": true,
+        "metricsLookbackDays": 7
+      },
+      "leaderboard": {
+        "enabled": true,
+        "schedule": "0 0 10 * * 5",
+        "lookbackDays": 7,
+        "showTopReviewers": 5,
+        "countApprovals": true,
+        "countComments": true,
+        "showTeamStats": true,
+        "showSpecialThanks": true,
+        "avoidNegativeRanking": true,
+        "ignoredUsers": [],
+        "giphyApiKeyEnvVar": "GIPHY_API_KEY"
+      },
+      "subscriptions": {
+        "enabled": true,
+        "autoSubscribeAuthors": true,
+        "autoSubscribeReviewers": true,
+        "autoSubscribeCommenters": true,
+        "allowManualSubscribe": false,
+        "notifyOn": {
+          "newComments": true,
+          "resolvedComments": true,
+          "buildFailed": true,
+          "buildSucceededAfterFailure": true,
+          "approvalChanged": true,
+          "mergeConflicts": true,
+          "prMerged": true,
+          "prAbandoned": true,
+          "newPushAfterReview": true
+        },
+        "dmRules": {
+          "buildFailedAuthorOnly": true,
+          "mergeConflictAuthorOnly": true,
+          "skipActor": true
+        }
+      },
+      "checks": {
+        "enabled": true,
+        "ignoredChecks": ["PR Title Check"],
+        "relevantChecks": [
+          "CI · Unit tests",
+          "CI · Lint",
+          "CI · Integration"
+        ]
+      }
+    }
+  ]
+}

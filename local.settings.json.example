@@ -1,0 +1,36 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+
+    "TIMER_RUN_ON_STARTUP": "false",
+
+    "TIMER_SCHEDULE_DAILY_REVIEW_DEBT": "0 0 9 * * 1-5",
+    "TIMER_SCHEDULE_WEEKLY_LEADERBOARD": "0 0 10 * * 5",
+    "TIMER_SCHEDULE_PERSONAL_SUBSCRIPTIONS": "0 */15 * * * *",
+
+    "IMMEDIATE_DAILY_REVIEW_DEBT": "false",
+    "IMMEDIATE_WEEKLY_LEADERBOARD": "false",
+    "IMMEDIATE_SCHEDULE_SUMMARIES": "false",
+
+    "PR_BOT_TABLE_NAME": "PrReviewState",
+    "PR_BOT_SUBSCRIPTIONS_TABLE_NAME": "PrReviewSubscriptions",
+    "PR_BOT_SCHEDULE_STATE_TABLE_NAME": "PrReviewScheduleState",
+    "PR_BOT_NOTIFICATION_STATE_TABLE_NAME": "PrReviewNotificationState",
+
+    "DRY_RUN": "false",
+    "DRY_RUN_SAVE_STATE": "true",
+
+    "PR_SNAPSHOT_CONCURRENCY": "8",
+    "LEADERBOARD_ADO_CONCURRENCY": "8",
+    "LOG_LEVEL": "info",
+
+    "MY_REPOSITORY_ID": "00000000-0000-0000-0000-000000000001",
+    "AZDO_PAT_MY_TEAM": "<pat>",
+    "SLACK_WEBHOOK_MY_TEAM": "<webhook-url>",
+    "SLACK_BOT_TOKEN_MY_TEAM": "xoxb-...",
+    "GIPHY_API_KEY": "<optional-giphy-api-key>"
+  }
+}
